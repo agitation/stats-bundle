@@ -1,0 +1,87 @@
+.dashboard                                                  {}
+.dashboard .widget                                          { margin-bottom: 30px; padding: 30px 0 0 30px; background: #fff; box-shadow: 0 0 4px #ddd; overflow: hidden; position: relative }
+.dashboard .widget.has-caption                              { padding-left: 80px; }
+
+.dashboard .caption                                         { position: absolute; top: 30px; left: 15px; margin: 0; transform: rotate(-90deg) translateX(-100%); transform-origin: 0% 0%;
+                                                              font-size: 40px; line-height: 1em; text-transform: uppercase; color: #bbb; font-weight: 300; }
+
+.dashboard .widget h3                                       { text-transform: uppercase; font-size: 14px; color: #555; font-weight: 500; margin: 0 0 10px; height: 1em; }
+
+.dashboard .widget .content                                 { margin: 0 30px 30px 0 }
+.dashboard .widget .content.chart                           { visibility: hidden; }
+.dashboard .widget .content.chart.loaded                    { visibility: visible; }
+
+.dashboard .widget .label                                   { display: inline-block; white-space: nowrap }
+.dashboard .widget .label span                              { vertical-align: middle; color: #777; font-size: 13px; font-weight: 400; }
+.dashboard .widget .label span.ind                          { display: inline-block; height: 7px; width: 7px; margin-right: 8px; border-radius: 1px; opacity: .7 }
+
+@media (min-width: 992px)
+{
+    .dashboard .widget.multi .content                       { width: calc(50% - 30px); float: left; }
+}
+
+
+/* special content types */
+
+.dashboard .donut-chart                                     { overflow: hidden; }
+.dashboard .donut-chart .data                               { height: 100px; position: relative; }
+.dashboard .donut-chart .data > *                           { position: absolute; width: 90px; height: 100px; vertical-align: middle; }
+.dashboard .donut-chart .total                              { text-align: center; line-height: 100px; font-weight: 500; white-space: nowrap; }
+.dashboard .donut-chart .legend                             { left: 105px; top: 50%; transform: translateY(-50%); width: auto; height: auto; line-height: 1.2em; }
+.dashboard .donut-chart .label                              { display: block; }
+
+
+@media (min-width: 992px)
+{
+    .dashboard .widget.multi .content.line-chart .elem      { height: 100px }
+}
+
+@media (max-width: 767px), (min-width: 1200px)
+{
+    .dashboard .widget.multi .content.line-chart .elem      { height: 150px }
+}
+
+
+
+
+/* chart coloring */
+
+.ct-label                                                   { font-size: 1rem }
+.ct-chart-pie .ct-label                                     { font-size: 1.2rem; text-shadow: 0 0 1px rgba(255, 255, 255, 0.5); fill: #444 }
+.ct-line                                                    { stroke-width: 1px }
+.ct-point                                                   { stroke-width: 4px }
+.ct-line, .ct-point, .ct-slice-donut, .ct-area              { opacity: .8 }
+
+
+.ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut { stroke: #1859a9; }
+.ct-series-a .ct-slice-pie, .ct-series-a .ct-area           { fill: #1859a9 }
+.ct-label-a .ind                                            { background: #1859a9 }
+
+
+.ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut { stroke: #f37d22; }
+.ct-series-b .ct-slice-pie, .ct-series-b .ct-area           { fill: #f37d22 }
+.ct-label-b .ind                                            { background: #f37d22 }
+
+.ct-series-c .ct-line, .ct-series-c .ct-point, .ct-series-c .ct-slice-donut { stroke: #ed2d2e; }
+.ct-series-c .ct-slice-pie, .ct-series-c .ct-area           { fill: #ed2d2e }
+.ct-label-c .ind                                            { background: #ed2d2e }
+
+.ct-series-d .ct-line, .ct-series-d .ct-point, .ct-series-d .ct-slice-donut { stroke: #008c47; }
+.ct-series-d .ct-slice-pie, .ct-series-d .ct-area           { fill: #008c47 }
+.ct-label-d .ind                                            { background: #008c47 }
+
+.ct-series-e .ct-line, .ct-series-e .ct-point, .ct-series-e .ct-slice-donut { stroke: #b33893; }
+.ct-series-e .ct-slice-pie, .ct-series-e .ct-area           { fill: #b33893 }
+.ct-label-e .ind                                            { background: #b33893 }
+
+.ct-series-f .ct-line, .ct-series-f .ct-point, .ct-series-f .ct-slice-donut { stroke: #a14d10; }
+.ct-series-f .ct-slice-pie, .ct-series-f .ct-area           { fill: #a14d10 }
+.ct-label-f .ind                                            { background: #a14d10 }
+
+.ct-series-g .ct-line, .ct-series-g .ct-point, .ct-series-g .ct-slice-donut { stroke: #662c91; }
+.ct-series-g .ct-slice-pie, .ct-series-g .ct-area           { fill: #662c91 }
+.ct-label-g .ind                                            { background: #662c91 }
+
+.ct-series-h .ct-line, .ct-series-h .ct-point, .ct-series-h .ct-slice-donut { stroke: #010101; }
+.ct-series-h .ct-slice-pie, .ct-series-h .ct-area           { fill: #010101 }
+.ct-label-h .ind                                            { background: #010101 }
