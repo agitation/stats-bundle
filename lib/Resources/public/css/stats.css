@@ -26,7 +26,7 @@
 .dashboard .donut-chart                                     { overflow: hidden; }
 .dashboard .donut-chart .data                               { height: 100px; position: relative; }
 .dashboard .donut-chart .data > *                           { position: absolute; width: 90px; height: 100px; vertical-align: middle; }
-.dashboard .donut-chart .total                              { text-align: center; line-height: 100px; font-weight: 500; white-space: nowrap; }
+.dashboard .donut-chart .total                              { text-align: center; line-height: 100px; font-weight: 500; white-space: nowrap; font-size: 18px }
 .dashboard .donut-chart .legend                             { left: 105px; top: 50%; transform: translateY(-50%); width: auto; height: auto; line-height: 1.2em; }
 .dashboard .donut-chart .label                              { display: block; }
 
