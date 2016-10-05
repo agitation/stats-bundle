@@ -13,8 +13,9 @@ use Agit\StatsBundle\Entity\StatData;
 use Agit\StatsBundle\Event\StatsProcessEvent;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface;
 
-class ProcessorService
+class ProcessorService implements CacheWarmerInterface
 {
     private $entityManager;
 
@@ -29,6 +30,16 @@ class ProcessorService
         $this->entityManager = $entityManager;
         $this->eventDispatcher = $eventDispatcher;
         $this->cacheService = $cacheService;
+    }
+
+    public function warmUp($cacheDir)
+    {
+        $this->executeProcessors();
+    }
+
+    public function isOptional()
+    {
+        return true;
     }
 
     public function executeProcessors()

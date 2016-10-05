@@ -6,7 +6,9 @@ services:
     agit.stats.processor:
         class: Agit\StatsBundle\Service\ProcessorService
         arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher", "@agit.stats.cache" ]
-        tags : [{ name: agit.cronjob, schedule: "*/5 * * * *", method: executeProcessors }]
+        tags :
+            - { name: agit.cronjob, schedule: "*/5 * * * *", method: executeProcessors }
+            - { name: kernel.cache_warmer }
 
     agit.stats.cache:
         class: Agit\StatsBundle\Service\CacheService
