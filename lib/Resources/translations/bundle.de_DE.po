@@ -1,0 +1,13 @@
+msgid ""
+msgstr ""
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: @AgitStatsBundle/Resources/public/js/lib/DashboardLineChart.js:37
+msgctxt "day/month"
+msgid "d/m"
+msgstr "d.m."
+
+#: @AgitStatsBundle/Controller/DashboardController.php:22
+msgid "You are currently not allowed to access this page. Please log in to view the dashboard."
+msgstr "Sie haben derzeit keinen Zugriff auf diese Seite. Bitte loggen Sie sich ein, um die Datenansicht zu laden."
