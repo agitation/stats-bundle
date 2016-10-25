@@ -1,0 +1,14 @@
+{
+    "eqeqeq": true,
+    "nocomma": true,
+    "expr" : true,
+    "browser": true,
+    "jquery" : true,
+    "predef": [ "ag", "Chartist" ],
+    "maxerr": 100,
+    "freeze" : true,
+    "nonew" : true,
+    "undef": true,
+    "unused": true,
+    "esversion" : 6
+}
