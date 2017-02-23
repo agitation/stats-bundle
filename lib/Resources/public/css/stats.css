@@ -18,9 +18,9 @@
 .dashboard .widget .content.chart                           { visibility: hidden; }
 .dashboard .widget .content.chart.loaded                    { visibility: visible; }
 
-.dashboard .widget .label                                   { display: inline-block; white-space: nowrap }
-.dashboard .widget .label span                              { vertical-align: middle; color: #777; font-size: 13px; font-weight: 400; }
-.dashboard .widget .label span.ind                          { display: inline-block; height: 7px; width: 7px; margin-right: 8px; border-radius: 1px; opacity: .7 }
+.dashboard .widget .label                                   { display: inline-block; white-space: nowrap; vertical-align: middle; }
+.dashboard .widget .label span                              { vertical-align: middle; color: #444; font-size: 13px; font-weight: 400; }
+.dashboard .widget .label span.ind                          { display: inline-block; height: 8px; width: 8px; margin-right: 8px; border-radius: 1px; opacity: .7 }
 
 @media (min-width: 992px)
 {
@@ -92,3 +92,7 @@
 .ct-series-h .ct-line, .ct-series-h .ct-point, .ct-series-h .ct-slice-donut { stroke: #010101; }
 .ct-series-h .ct-slice-pie, .ct-series-h .ct-area           { fill: #010101 }
 .ct-label-h .ind                                            { background: #010101 }
+
+.no-data .ct-slice-donut                                    { stroke: rgba(0,0,0,.1); stroke-width: 2px !important }
+.widget .no-data .label span                                { font-style: italic; color: #888 }
+.widget .no-data .label span.ind                            { display: none }
