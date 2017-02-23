@@ -9,8 +9,8 @@
 
 namespace Agit\StatsBundle\Controller;
 
-use Agit\ApiBundle\Exception\UnauthorizedException;
 use Agit\IntlBundle\Tool\Translate;
+use Agit\StatsBundle\Exception\UnauthorizedException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
