@@ -6,6 +6,9 @@
 .dashboard .widget                                          { margin-bottom: 30px; padding: 30px 0 0 30px; background: #fff; box-shadow: 0 0 4px #ddd; overflow: hidden; position: relative }
 .dashboard .widget.has-caption                              { padding-left: 80px; }
 
+.dashboard .widget .footer                                  { clear: both; margin: 0 30px 30px 0; font-size: 13px; }
+.dashboard .widget .footer:empty                            { margin: 0; }
+
 .dashboard .caption                                         { position: absolute; top: 30px; left: 15px; margin: 0; transform: rotate(-90deg) translateX(-100%); transform-origin: 0% 0%;
                                                               font-size: 40px; line-height: 1em; text-transform: uppercase; color: #bbb; font-weight: 300; }
 
