@@ -13,6 +13,7 @@
                                                               font-size: 40px; line-height: 1em; text-transform: uppercase; color: #bbb; font-weight: 300; }
 
 .dashboard .widget h3                                       { text-transform: uppercase; font-size: 14px; color: #555; font-weight: 500; margin: 0 0 10px; height: 1em; }
+.dashboard .widget h3:empty                                 { margin: 0; height: 0; }
 
 .dashboard .widget .content                                 { margin: 0 30px 30px 0 }
 .dashboard .widget .content.chart                           { visibility: hidden; }
@@ -60,36 +61,36 @@
 .ct-line, .ct-point, .ct-slice-donut, .ct-area              { opacity: .8 }
 
 
-.ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut { stroke: #1859a9; }
+.ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut, .ct-series-a .ct-bar { stroke: #1859a9; }
 .ct-series-a .ct-slice-pie, .ct-series-a .ct-area           { fill: #1859a9 }
 .ct-label-a .ind                                            { background: #1859a9 }
 
 
-.ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut { stroke: #f37d22; }
+.ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut, .ct-series-b .ct-bar { stroke: #f37d22; }
 .ct-series-b .ct-slice-pie, .ct-series-b .ct-area           { fill: #f37d22 }
 .ct-label-b .ind                                            { background: #f37d22 }
 
-.ct-series-c .ct-line, .ct-series-c .ct-point, .ct-series-c .ct-slice-donut { stroke: #ed2d2e; }
+.ct-series-c .ct-line, .ct-series-c .ct-point, .ct-series-c .ct-slice-donut, .ct-series-c .ct-bar { stroke: #ed2d2e; }
 .ct-series-c .ct-slice-pie, .ct-series-c .ct-area           { fill: #ed2d2e }
 .ct-label-c .ind                                            { background: #ed2d2e }
 
-.ct-series-d .ct-line, .ct-series-d .ct-point, .ct-series-d .ct-slice-donut { stroke: #008c47; }
+.ct-series-d .ct-line, .ct-series-d .ct-point, .ct-series-d .ct-slice-donut, .ct-series-d .ct-bar { stroke: #008c47; }
 .ct-series-d .ct-slice-pie, .ct-series-d .ct-area           { fill: #008c47 }
 .ct-label-d .ind                                            { background: #008c47 }
 
-.ct-series-e .ct-line, .ct-series-e .ct-point, .ct-series-e .ct-slice-donut { stroke: #b33893; }
+.ct-series-e .ct-line, .ct-series-e .ct-point, .ct-series-e .ct-slice-donut, .ct-series-e .ct-bar { stroke: #b33893; }
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-area           { fill: #b33893 }
 .ct-label-e .ind                                            { background: #b33893 }
 
-.ct-series-f .ct-line, .ct-series-f .ct-point, .ct-series-f .ct-slice-donut { stroke: #a14d10; }
+.ct-series-f .ct-line, .ct-series-f .ct-point, .ct-series-f .ct-slice-donut, .ct-series-f .ct-bar { stroke: #a14d10; }
 .ct-series-f .ct-slice-pie, .ct-series-f .ct-area           { fill: #a14d10 }
 .ct-label-f .ind                                            { background: #a14d10 }
 
-.ct-series-g .ct-line, .ct-series-g .ct-point, .ct-series-g .ct-slice-donut { stroke: #662c91; }
+.ct-series-g .ct-line, .ct-series-g .ct-point, .ct-series-g .ct-slice-donut, .ct-series-g .ct-bar { stroke: #662c91; }
 .ct-series-g .ct-slice-pie, .ct-series-g .ct-area           { fill: #662c91 }
 .ct-label-g .ind                                            { background: #662c91 }
 
-.ct-series-h .ct-line, .ct-series-h .ct-point, .ct-series-h .ct-slice-donut { stroke: #010101; }
+.ct-series-h .ct-line, .ct-series-h .ct-point, .ct-series-h .ct-slice-donut, .ct-series-h .ct-bar { stroke: #010101; }
 .ct-series-h .ct-slice-pie, .ct-series-h .ct-area           { fill: #010101 }
 .ct-label-h .ind                                            { background: #010101 }
 
