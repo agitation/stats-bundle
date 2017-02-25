@@ -25,7 +25,7 @@ class CollectorService
 
     public function add($module, $data, $ttl = 33)
     {
-        $created = (time() - rand(1000, 50 * 24 * 3600));
+        $created = time();
         $statData = new StatData();
         $statData->setCreated($created);
         $statData->setExpires($created + ($ttl * 24 * 3600));
