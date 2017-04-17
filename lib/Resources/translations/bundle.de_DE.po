@@ -3,10 +3,9 @@ msgstr ""
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitStatsBundle/Resources/public/js/lib/DashboardLineChart.js:37
-msgctxt "day/month"
-msgid "d/m"
-msgstr "d.m."
+#: @AgitStatsBundle/Resources/public/js/lib/DashboardDonutChart.js:50
+msgid "(no data available yet)"
+msgstr "(noch keine Daten vorhanden)"
 
 #: @AgitStatsBundle/Controller/DashboardController.php:22
 msgid "You are currently not allowed to access this page. Please log in to view the dashboard."

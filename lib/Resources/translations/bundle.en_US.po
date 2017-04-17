@@ -3,9 +3,8 @@ msgstr ""
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitStatsBundle/Resources/public/js/lib/DashboardLineChart.js:37
-msgctxt "day/month"
-msgid "d/m"
+#: @AgitStatsBundle/Resources/public/js/lib/DashboardDonutChart.js:50
+msgid "(no data available yet)"
 msgstr ""
 
 #: @AgitStatsBundle/Controller/DashboardController.php:22
