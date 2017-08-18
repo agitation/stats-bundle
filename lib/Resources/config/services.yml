@@ -2,14 +2,5 @@ services:
     agit.stats.collector:
         class: Agit\StatsBundle\Service\CollectorService
         arguments: [ "@doctrine.orm.entity_manager" ]
-
-    agit.stats.processor:
-        class: Agit\StatsBundle\Service\ProcessorService
-        arguments: [ "@doctrine.orm.entity_manager", "@event_dispatcher", "@agit.stats.cache" ]
         tags :
-            - { name: agit.cronjob, schedule: "*/5 * * * *", method: executeProcessors }
-            - { name: kernel.cache_warmer }
-
-    agit.stats.cache:
-        class: Agit\StatsBundle\Service\CacheService
-        arguments: [ "%kernel.cache_dir%" ]
+            - { name: agit.cronjob, schedule: "* 23 * * *", method: cleanUp }

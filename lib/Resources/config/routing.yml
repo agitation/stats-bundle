@@ -1,3 +1,0 @@
-stats_dashboard :
-    path : /load
-    defaults : { _controller: AgitStatsBundle:Dashboard:load }

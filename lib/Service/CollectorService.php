@@ -23,7 +23,7 @@ class CollectorService
         $this->entityManager = $entityManager;
     }
 
-    public function add($module, $data, $ttl = 33)
+    public function put($module, $data, $ttl = 33)
     {
         $created = time();
         $statData = new StatData();
@@ -33,12 +33,37 @@ class CollectorService
         $statData->setData($data);
 
         $this->entityManager->persist($statData);
-
-        return $this;
+        $this->entityManager->flush();
     }
 
-    public function save()
+    public function get($module, $since, $until = null)
     {
-        $this->entityManager->flush();
+        $set = $this->entityManager->createQuery("
+            SELECT data.created, data.data
+            FROM AgitStatsBundle:StatData data
+            WHERE
+                data.module = :module AND
+                data.created BETWEEN :since AND :until
+            ORDER BY data.created ASC
+        ")
+        ->setParameter("module", $module)
+        ->setParameter("since", $since)
+        ->setParameter("until", $until ?: time())
+        ->execute();
+
+        foreach ($set as &$row) {
+            $row["data"] = json_decode($row["data"], true);
+        }
+
+        return $set;
+    }
+
+    public function cleanUp()
+    {
+        $this->entityManager->createQueryBuilder()
+            ->delete("AgitStatsBundle:StatData", "data")
+            ->where("data.expires <= :now")
+            ->setParameter("now", time())
+            ->getQuery()->execute();
     }
 }
