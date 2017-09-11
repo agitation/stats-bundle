@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/stats-bundle
  * @link       http://github.com/agitation/stats-bundle
@@ -38,21 +38,22 @@ class CollectorService
 
     public function get($module, $since, $until = null)
     {
-        $set = $this->entityManager->createQuery("
+        $set = $this->entityManager->createQuery('
             SELECT data.created, data.data
             FROM AgitStatsBundle:StatData data
             WHERE
                 data.module = :module AND
                 data.created BETWEEN :since AND :until
             ORDER BY data.created ASC
-        ")
-        ->setParameter("module", $module)
-        ->setParameter("since", $since)
-        ->setParameter("until", $until ?: time())
+        ')
+        ->setParameter('module', $module)
+        ->setParameter('since', $since)
+        ->setParameter('until', $until ?: time())
         ->execute();
 
-        foreach ($set as &$row) {
-            $row["data"] = json_decode($row["data"], true);
+        foreach ($set as &$row)
+        {
+            $row['data'] = json_decode($row['data'], true);
         }
 
         return $set;
@@ -61,9 +62,9 @@ class CollectorService
     public function cleanUp()
     {
         $this->entityManager->createQueryBuilder()
-            ->delete("AgitStatsBundle:StatData", "data")
-            ->where("data.expires <= :now")
-            ->setParameter("now", time())
+            ->delete('AgitStatsBundle:StatData', 'data')
+            ->where('data.expires <= :now')
+            ->setParameter('now', time())
             ->getQuery()->execute();
     }
 }

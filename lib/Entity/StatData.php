@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/stats-bundle
  * @link       http://github.com/agitation/stats-bundle
@@ -128,6 +128,7 @@ class StatData
      * Set expires.
      *
      * @param int expires
+     * @param mixed $expires
      *
      * @return StatData
      */
