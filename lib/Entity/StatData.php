@@ -111,7 +111,7 @@ class StatData
      */
     public function getData()
     {
-        return json_decode($this->data, true);
+        return json_decode((string)$this->data, true);
     }
 
     /**

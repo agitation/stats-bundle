@@ -53,7 +53,7 @@ class CollectorService
 
         foreach ($set as &$row)
         {
-            $row['data'] = json_decode($row['data'], true);
+            $row['data'] = json_decode((string)$row['data'], true);
         }
 
         return $set;
